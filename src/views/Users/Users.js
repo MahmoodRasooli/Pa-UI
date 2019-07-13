@@ -16,7 +16,7 @@ function UserRow(props) {
             'primary'
   }
 
-  return (
+  return (    
     <tr key={user.id.toString()}>
       <th scope="row"><Link to={userLink}>{user.id}</Link></th>
       <td><Link to={userLink}>{user.name}</Link></td>
@@ -30,7 +30,7 @@ function UserRow(props) {
 class Users extends Component {
 
   render() {
-
+    console.table(usersData);
     const userList = usersData.filter((user) => user.id < 10)
 
     return (
