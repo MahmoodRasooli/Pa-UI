@@ -168,3 +168,5 @@ class Typography extends Component {
 }
 
 export default Typography;
+var x = 5 ;
+export const X = x

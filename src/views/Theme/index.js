@@ -1,6 +1,6 @@
 import Colors from './Colors';
 import Typography from './Typography';
 
-export {
+export default {
   Colors, Typography,
 };

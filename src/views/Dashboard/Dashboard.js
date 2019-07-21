@@ -20,8 +20,11 @@ import {
   Row,
   Table,
 } from 'reactstrap';
+import  EventBox  from "../Event/EventBox"; 
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
+
+let a = new EventBox
 
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
@@ -483,6 +486,7 @@ class Dashboard extends Component {
 
     return (
       <div className="animated fadeIn">
+         <EventBox></EventBox>
         <Row>
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
