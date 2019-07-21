@@ -1,49 +1,45 @@
 import React, { Component } from 'react';
-import {Card , CardHeader,CardBody , Table , Col , Row} from 'reactstrap'
+import { Card, CardHeader, CardBody, Table, Col, Row } from 'reactstrap'
 
- class EventBox extends Component {
-    render(){
-        return (
-           <span>
-               <Row>
-  <Col  xs="12" sm="6" lg="3" >
-            <Card className="text-white bg-info" >
-              <CardBody className="pb-0">
-               <div className="text-value ">کوه</div>
-               <div className="text-value ">کوه</div>
-               <div className="text-value ">کوه</div>
-                
-                <table style={{float:"right"}}>
-                     <tr>
-                         <td>نام</td>
-                         <td></td>
-                     </tr>
-                     <tr>
-                         <td>ظرفیت</td>
-                         <td>دو نفر</td>
-                     </tr>
-                     <tr>
-                         <td>تاریخ شروع</td>
-                         <td>12/1</td>
-                     </tr>
-                     <tr>
-                         <td>شهر</td>
-                         <td>تهران</td>
-                     </tr>
-                 </table>
-                <div>Members online</div>
-              </CardBody>
-              <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-               asd
-              </div>
-            </Card>
-          </Col>
+class EventBox extends Component {
 
-               </Row>
-               
-            </span>
-        )
+    constructor(props) {
+        super(props);
+        this.props.mode = props.mode;
+        this.state = props.state;
+    }
+
+    render() {
+
+        switch (this.props.mode) {
+            case 'create':
+                return <this.renderViewMode />;
+            case 'edit':
+                return <this.renderEditMode/>;
+            case 'view':
+                return <this.renderViewMode/>;
+            case 'delete':
+                return <this.renderDeleteMode/>;
+            default:
+                throw new Error('Invalid render state.');
+        }        
     };
+
+    renderViewMode() {
+        return <div className='col-lg-12'></div>;
+    }
+
+    renderCreateMode() {
+
+    }
+
+    renderEditMode() {
+
+    }
+
+    renderDeleteMode() {
+
+    }
 }
 
 
